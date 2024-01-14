@@ -1,0 +1,234 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #ffffff;
+}
+
+header {
+    position: relative;
+    background-image: url("images/banner.jpeg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 60px;
+}
+
+.quote {
+    font-size: 3rem;
+    margin: 0;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+form {
+    display: flex;
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    bottom: -8%;
+    width: 63%;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #343434;
+    padding: 15px 18px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    flex: 3;
+    cursor: text;
+}
+
+.fa-magnifying-glass {
+    color: #A5A5A5;
+    font-size: 1.125rem;
+    cursor: auto;
+}
+
+.input-container > input {
+    border: none;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    outline: none;
+    color: rgb(200, 200, 200);
+    font-size: 1.025rem;
+}
+
+.input-container > input::placeholder {
+    color: #A5A5A5;
+    font-size: 1.025rem;
+    position: relative;
+}
+
+form > button {
+    min-width: 80px;
+    color: rgb(205, 205, 205);
+    font-size: 1.0125rem;
+    background-color: #4B4B4B;
+    border: none;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    cursor: pointer;
+    flex: 0.4;
+}
+
+main {
+    background-color: #000000;
+    padding: 80px;
+    min-height: 40vh;
+}
+
+.fa-star {
+    color: #FEC654; 
+}
+
+.movie {
+    display: flex;
+    width: 85%;
+    padding: 32px 0;
+    border-bottom: 3px solid #2c2c2c;
+    margin: 0 auto;
+    gap: 22px;
+}
+
+.poster {
+    --width: 160px;
+    width: var(--width);
+    height: calc(var(--width) * 3/2)
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.rating {
+    display: flex;
+    gap: 3px;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 0.875rem;
+}
+
+span {
+    position: relative;
+    bottom: 20px;
+    font-size: 0.875rem;
+}
+
+.summary {
+    color: #bebebe;
+    max-width: 620px;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.fa-plus,
+.fa-minus {
+    color: black;
+    background-color: white;
+    padding: 4px 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.fa-minus {
+
+    background-color: red;
+}
+
+.fa-plus:active,
+.fa-minus:active {
+    background-color: #343434;
+    color: white;
+}
+
+.placeholder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 45vh;
+}
+
+.fa-film,
+h4 {
+    color: #676767;
+    font-size: 55px;
+}
+
+h4 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.add-movies {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+@media (max-width: 768px) {
+    form {
+        width: 90%;
+    }
+    main {
+        padding: 15px;
+    }
+    .movie {
+        width: 100%;
+        gap: 10px;
+        flex-direction: column;
+    }
+    .title > h2,
+    .title > p,
+    .summary {
+        margin: 0;
+    }
+    .poster {
+        --width: 140px;
+    }
+    span {
+        top: 5px;
+    }
+    .placeholder {
+        height: 60vh;
+    }
+}
