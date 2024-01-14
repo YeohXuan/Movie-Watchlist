@@ -5,7 +5,7 @@ function renderWatchlist() {
     watchlistHtml.textContent = "";
     
     for (const movieId of watchlist) {
-        fetch(`http://www.omdbapi.com/?apikey=662bc325&i=${movieId}`)
+        fetch(`https://www.omdbapi.com/?apikey=662bc325&i=${movieId}`)
             .then(response => response.json())
             .then(data => {
                 let { Poster, Title, imdbRating, Year, Runtime, Genre, Plot, imdbID } = data;

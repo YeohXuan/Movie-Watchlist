@@ -17,7 +17,7 @@ searchInput.addEventListener("keydown", (e) => {
 
 async function getMovie() {
     const searchedMovie = searchInput.value;
-    const response = await fetch(`http://www.omdbapi.com/?apikey=662bc325&s=${searchedMovie}&type=movie&plot=full`);
+    const response = await fetch(`https://www.omdbapi.com/?apikey=662bc325&s=${searchedMovie}&type=movie&plot=full`);
     const data = await response.json();
 
     if (data.Response === "False") {
@@ -58,7 +58,7 @@ function addToWatchlist(movieId) {
 }
 
 async function renderResult(dataId) {
-    const response = await fetch(`http://www.omdbapi.com/?apikey=662bc325&i=${dataId}`);
+    const response = await fetch(`https://www.omdbapi.com/?apikey=662bc325&i=${dataId}`);
     const data = await response.json();
     let { Poster, Title, imdbRating, Year, Runtime, Genre, Plot, imdbID } = data;
     
